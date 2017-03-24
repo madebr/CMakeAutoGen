@@ -1,20 +1,35 @@
 # CMake implementation of AutoGen
 # Copyright (C) 2017 Anonymous Maarten <anonymous.maarten@gmail.com>
 
-function(add_autogen_target INPUT)
-    set(OUTPUT "${ARGN}")
+set(AUTOGEN_SCRIPT "${PROJECT_SOURCE_DIR}/CMakeModules/CMakeAutoGenScript.cmake")
+
+function(add_autogen_target INPUT OUTPUTDIR)
+    set(OUTPUTFILES "${ARGN}")
+
+    if (OUTPUTDIR)
+        set(PREFIX "${OUTPUTDIR}/")
+    else()
+        set(PREFIX "")
+    endif()
+
+    set(ARTIFACTS)
+    foreach(OUTPUTFILE ${OUTPUTFILES})
+        list(APPEND ARTIFACTS "${PREFIX}${OUTPUTFILE}")
+    endforeach()
 
     set(EXTRA_ARGS)
     if (AUTOGEN_DEBUG)
-        list(APPEND EXTRA_ARGS
-            "-DDEBUG=1"
-        )
+        list(APPEND EXTRA_ARGS "-DDEBUG=1")
+    endif()
+    if (OUTPUTDIR)
+        list(APPEND EXTRA_ARGS "-DOUTPUTDIR=${OUTPUTDIR}")
     endif()
 
     add_custom_command(
-        OUTPUT ${OUTPUT}
-        COMMAND ${CMAKE_COMMAND} "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${PROJECT_SOURCE_DIR}/CMakeModules/CMakeAutoGenScript.cmake"
+        OUTPUT ${ARTIFACTS}
+        COMMAND ${CMAKE_COMMAND} "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${AUTOGEN_SCRIPT}"
         MAIN_DEPENDENCY "${INPUT}"
+        DEPENDS "${AUTOGEN_SCRIPT}"
         COMMENT "AutoGen: parsing ${INPUT}, generating ${OUTPUT}"
     )
 endfunction()
