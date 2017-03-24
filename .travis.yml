@@ -1,0 +1,11 @@
+language: c
+
+script:
+- cmake --version
+- mkdir build
+- cd build
+- cmake ..
+- make FORCE_AUTOGEN VERBOSE=y
+
+after_script:
+- ctest -V

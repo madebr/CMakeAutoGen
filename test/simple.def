@@ -1,0 +1,11 @@
+autogen definitions simple.tpl;
+
+
+type_1 = {
+	type_name = name1;
+};
+
+type_1 = {
+	type_name = name2;
+};
+type_1 = { type_name = name3;};
