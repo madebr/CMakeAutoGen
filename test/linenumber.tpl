@@ -1,0 +1,7 @@
+[+ AutoGen5 template out +]
+line [+ (tpl-file-line "%2$d") +]
+line [+ (tpl-file-line "%2$d") +]
+line [+ (tpl-file-line "%2$d") +]
+line [+ (tpl-file-line "%2$d") +]
+line [+ (tpl-file-line "%2$d") +]
+line [+ (tpl-file-line "%2$d") +]
