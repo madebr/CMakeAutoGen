@@ -1,0 +1,21 @@
+autogen definitions math.tpl;
+
+type = {
+name   = add ;
+operation  = "5 + 5" ;
+};
+
+type = {
+name   = multiply ;
+operation  = "5 * 5" ;
+};
+
+type = {
+name   = divide ;
+operation  = "5 / 5" ;
+};
+
+type = {
+name   = divide ;
+operation  = "5 / 5" ;
+};

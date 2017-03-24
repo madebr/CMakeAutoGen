@@ -4,3 +4,4 @@
 force_build_autogen_target(simple.def "" simple.out)
 force_build_autogen_target(header_source.def "" header_source.c header_source.h)
 force_build_autogen_target(quotes.def "" quotes.out)
+force_build_autogen_target(math.def "" math.out)

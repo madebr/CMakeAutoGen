@@ -30,6 +30,6 @@ function(add_autogen_target INPUT OUTPUTDIR)
         COMMAND ${CMAKE_COMMAND} "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${AUTOGEN_SCRIPT}"
         MAIN_DEPENDENCY "${INPUT}"
         DEPENDS "${AUTOGEN_SCRIPT}"
-        COMMENT "AutoGen: parsing ${INPUT}, generating ${OUTPUT}"
+        COMMENT "AutoGen: parsing ${INPUT}, generating ${OUTPUTFILES}"
     )
 endfunction()
