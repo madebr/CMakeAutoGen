@@ -5,7 +5,7 @@ script:
 - mkdir build
 - cd build
 - cmake ..
-- make FORCE_AUTOGEN VERBOSE=y
+- make FORCE_AUTOGEN
 
 after_script:
-- ctest -V
+- ctest
