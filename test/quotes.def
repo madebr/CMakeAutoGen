@@ -1,0 +1,14 @@
+autogen definitions quotes.tpl;
+
+type = {
+format		= FORMAT;
+} ;
+
+type = {
+format      = "DOUBLE_QUOTES";
+} ;
+
+
+type = {
+format      = 'SINGLE_QUOTES';
+} ;
