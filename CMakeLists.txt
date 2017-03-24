@@ -7,7 +7,7 @@ project(CMakeAutoGen)
 include(CMakeModules/CMakeAutoGen.cmake)
 
 enable_testing()
-#set(AUTOGEN_DEBUG 1)
+option(AUTOGEN_DEBUG "DEBUG AUTOGEN" 0)
 
 add_custom_target(FORCE_AUTOGEN)
 
