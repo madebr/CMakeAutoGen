@@ -13,7 +13,7 @@ function(add_autogen_target INPUT)
 
     add_custom_command(
         OUTPUT ${OUTPUT}
-        COMMAND ${CMAKE_COMMAND} "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${CMAKE_SOURCE_DIR}/CMakeAutoGenScript.cmake"
+        COMMAND ${CMAKE_COMMAND} "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${PROJECT_SOURCE_DIR}/CMakeModules/CMakeAutoGenScript.cmake"
         MAIN_DEPENDENCY "${INPUT}"
         COMMENT "AutoGen: parsing ${INPUT}, generating ${OUTPUT}"
     )

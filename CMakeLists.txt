@@ -2,7 +2,9 @@
 # Copyright (C) 2017 Anonymous Maarten <anonymous.maarten@gmail.com>
 
 cmake_minimum_required(VERSION 2.8)
-include(CMakeAutoGen.cmake)
+project(CMakeAutoGen)
+
+include(CMakeModules/CMakeAutoGen.cmake)
 
 enable_testing()
 #set(AUTOGEN_DEBUG 1)
@@ -19,7 +21,7 @@ function(force_build_autogen_target INPUT)
         list(APPEND REFERENCES "${OUTPUT}.ref")
     endforeach()
     add_test(NAME "test_${INPUT}"
-        COMMAND ${CMAKE_COMMAND} "-DOUTPUTS=${OUTPUTS}" "-DREFERENCES=${REFERENCES}" "-DREFDIR=${CMAKE_CURRENT_LIST_DIR}" -P "${CMAKE_SOURCE_DIR}/CMakeDiffScript.cmake")
+        COMMAND ${CMAKE_COMMAND} "-DOUTPUTS=${OUTPUTS}" "-DREFERENCES=${REFERENCES}" "-DREFDIR=${CMAKE_CURRENT_LIST_DIR}" -P "${PROJECT_SOURCE_DIR}/CMakeModules/CMakeDiffScript.cmake")
 endfunction()
 
 add_subdirectory(test)
