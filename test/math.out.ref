@@ -2,4 +2,11 @@ add 5 + 5
 multiply 5 * 5
 divide 5 / 5
 divide 5 / 5
+modulo 5 % 5
+rightshift 5 >> 5
+leftshift 5 << 5
+ifswitch 1 ? "true" : "false"
+float 3.14159265359f
+parentheses (5 + 5) * 5
+comma 1, 2, 3, 4
 

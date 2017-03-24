@@ -1,21 +1,56 @@
 autogen definitions math.tpl;
 
 type = {
-name   = add ;
-operation  = "5 + 5" ;
+name        = add ;
+operation   = "5 + 5" ;
 };
 
 type = {
-name   = multiply ;
-operation  = "5 * 5" ;
+name        = multiply ;
+operation   = "5 * 5" ;
 };
 
 type = {
-name   = divide ;
-operation  = "5 / 5" ;
+name        = divide ;
+operation   = "5 / 5" ;
 };
 
 type = {
-name   = divide ;
-operation  = "5 / 5" ;
+name        = divide ;
+operation   = "5 / 5" ;
+};
+
+type = {
+name        = modulo ;
+operation   = "5 % 5" ;
+};
+
+type = {
+name        = rightshift ;
+operation   = "5 >> 5" ;
+};
+
+type = {
+name        = leftshift ;
+operation   = "5 << 5" ;
+};
+
+type = {
+name        = ifswitch ;
+operation   = "1 ? \"true\" : \"false\"" ;
+};
+
+type = {
+name        = float ;
+operation   = "3.14159265359f" ;
+};
+
+type = {
+name        = parentheses ;
+operation   = "(5 + 5) * 5" ;
+};
+
+type = {
+name        = comma ;
+operation   = "1, 2, 3, 4" ;
 };
