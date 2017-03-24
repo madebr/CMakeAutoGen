@@ -1,12 +1,12 @@
-[+ AutoGen5 template h c +]
+[+ AutoGen5 template out1 out2 +]
 GENERAL
 [+ CASE (suffix) +]
-[+ ==  h  +]
-HHHH
+[+ ==  out1  +]
+OUT1
 [+ FOR type +][+(get "name")+]
 [+ ENDFOR type +]
-[+ ==  c  +]
-CCCC
+[+ ==  out2  +]
+OUT2
 [+ FOR type +][+(get "name")+]
 [+ ENDFOR type +]
 [+ ESAC +]

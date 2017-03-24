@@ -1,0 +1,5 @@
+autogen definitions case_suffix.tpl;
+
+type = {
+	name		= "type_name" ;
+} ;

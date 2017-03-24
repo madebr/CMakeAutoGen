@@ -1,5 +1,0 @@
-autogen definitions header_source.tpl;
-
-type = {
-	name		= "type_name" ;
-} ;
