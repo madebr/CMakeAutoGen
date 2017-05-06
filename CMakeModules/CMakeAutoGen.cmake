@@ -1,5 +1,6 @@
 # CMake implementation of AutoGen
 # Copyright (C) 2017 Anonymous Maarten <anonymous.maarten@gmail.com>
+# https://github.com/madebr/CMakeAutoGen
 
 set(AUTOGEN_SCRIPT "${PROJECT_SOURCE_DIR}/CMakeModules/CMakeAutoGenScript.cmake")
 

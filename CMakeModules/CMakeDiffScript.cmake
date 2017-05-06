@@ -1,5 +1,6 @@
 # CMake implementation of AutoGen
 # Copyright (C) 2017 Anonymous Maarten <anonymous.maarten@gmail.com>
+# https://github.com/madebr/CMakeAutoGen
 
 if ("${REFERENCES}" STREQUAL "")
     message(FATAL_ERROR "Need REFERENCES")
