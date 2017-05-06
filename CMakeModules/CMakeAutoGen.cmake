@@ -53,6 +53,6 @@ function(autogen_add_command INPUT OUTPUTDIR)
         COMMAND "${CMAKE_COMMAND}" "-DACTION=TEMPLATE" "-DDEFINITION=${CMAKE_CURRENT_SOURCE_DIR}/${INPUT}" ${EXTRA_ARGS} -P "${AUTOGEN_SCRIPT}"
         MAIN_DEPENDENCY "${INPUT}"
         DEPENDS ${AUTOGEN_SCRIPT} ${DEPENDS}
-        COMMENT "AutoGen: parsing ${INPUT}, generating ${OUTPUTFILES}"
+        COMMENT "AutoGen: parsing ${INPUT}, generating ${TARGETS}"
     )
 endfunction()
